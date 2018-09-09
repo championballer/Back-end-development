@@ -6,7 +6,7 @@ function average(scores)
         avg+=scores[i];
     }
     
-    return avg/(scores.length);
+    return Math.round(avg/(scores.length));
 }
 
 var scores = [90,98,89,100,100,86,94];
