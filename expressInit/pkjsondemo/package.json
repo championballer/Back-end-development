@@ -1,14 +1,15 @@
 {
   "name": "pkjsondemo",
   "version": "1.0.0",
-  "description": "simple json package",
+  "description": "simple json package file",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shiv Kumar",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "cat-me": "^1.0.3"
+    "cat-me": "^1.0.3",
+    "express": "^4.16.3"
   }
 }
