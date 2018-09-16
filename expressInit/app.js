@@ -24,7 +24,7 @@ app.get("/r/:subreddit",function(req,res){
     console.log(req.params);
     var subred = req.params.subreddit;
     console.log(subred);
-    res.send("Welcome to "+subred+""); 
+    res.send("Welcome to "+subred+" subreddit"); 
 });
 
 app.get("*",function(req,res){
