@@ -19,11 +19,14 @@ app.get("/dog",function(req,res){
    console.log("dog request made");
 });
 
+app.get("/r/:subreddit",function(req,res){
+   res.send("Welcome to subreddit"); 
+});
+
 app.get("*",function(req,res){
     res.send("General page encountered");
     console.log("No context request made");
 });
-
 
 app.listen(process.env.PORT,process.env.IP,function(){
     console.log("Server has started");
