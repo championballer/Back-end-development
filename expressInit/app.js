@@ -20,7 +20,11 @@ app.get("/dog",function(req,res){
 });
 
 app.get("/r/:subreddit",function(req,res){
-   res.send("Welcome to subreddit"); 
+
+    console.log(req.params);
+    var subred = req.params.subreddit;
+    console.log(subred);
+    res.send("Welcome to "+subred+""); 
 });
 
 app.get("*",function(req,res){
