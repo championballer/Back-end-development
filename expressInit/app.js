@@ -3,6 +3,10 @@ var app = express();
 
 //three different routes
 //the order of the get requests being defined matter, the one defined before holds better precedence.
+app.get("*",function(req,res){
+    res.send("General page encountered");
+    console.log("No context request made");
+});
 
 app.get("/",function(req,res){
     res.send("Hi there");
