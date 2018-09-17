@@ -6,21 +6,22 @@ app.get("/",function(req,res){
 });
 
 app.get("/speak/:animal",function(req,res){
-   var an = req.params.animal;
-   if(an=="pig")
+   
+   var sounds = {
+     dog : "Woof Woof",
+     pig : "Oink",
+     cow : "Moo"
+   };
+   
+   var ani = req.params.animal.toLowerCase();
+   if(ani in sounds)
    {
-       res.send("The pig says 'Oink'");
+       res.send("The "+ani.charAt(0).toUpperCase()+ani.substr(1)+" says \""+sounds[ani]+"\"");
    }
    
-   else if(an=="cow")
-   {
-       res.send("The cow says 'Moo'");
-   }
+   else res.send("Not available");
    
-   else if(an=="dog")
-   {
-       res.send("The dog says 'Woof Woof'");
-   }
+   
 });
 
 app.get("/repeat/:key/:times",function(req,res){
